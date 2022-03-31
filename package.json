@@ -4,7 +4,18 @@
   "description": "[![Build status](https://ci.appveyor.com/api/projects/status/5f1oc15fy49juqsl?svg=true)](https://ci.appveyor.com/project/KuzminaYuliya/ahj-dom1)",
   "main": "webpack.common.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint .",
+    "test": "jest --passWithNoTests",
+    "coverage": "jest --coverage",
+    "doc": "jsdoc -c jsdoc.conf.json",
+    "preshow:coverage": "npm run coverage",
+    "show:coverage": "live-server coverage/lcov-report",
+    "preshow:doc": "npm run doc",
+    "show:doc": "live-server doc",
+    "preshow:dist": "npm run build",
+    "show:dist": "live-server dist"
   },
   "repository": {
     "type": "git",
