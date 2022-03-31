@@ -3,7 +3,7 @@
 export default class GoblinCell {
   constructor() {
     this.fieldSize = 4;
-    // this.cells = Array.from(document.querySelectorAll('.cell'));
+    this.cells = Array.from(document.querySelectorAll('.cell'));
     this.field = document.querySelector('.field');
     this.cells = null;
     this.previousIndex = null;
