@@ -25,22 +25,17 @@ module.exports = {
           },
         ],
       },
-			{//это должно быт здесь, тк есть встроенный лоадер, способный обрабатывать такие файлы
-				test: /\.(?:ico|png|jpg|jpeg|gif)$/i,
-					
-				type:'asset/resource',
-					
-      },
+	  {
+		test: /\.png$/,
+		type: 'asset/resource',
+},
 			{
 				test: /\.css$/,
 				use: [
           MiniCssExtractPlugin.loader, 'css-loader',
         ],
       },
-			{
-				test: /\.svg$/,
-				type: 'asset/resource',
-      },
+			
     ],
 	},
 	plugins: [
